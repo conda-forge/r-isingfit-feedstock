@@ -1,4 +1,4 @@
-{% set version = '0.3.1' %}
+{% set version = "0.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/IsingFit_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/IsingFit/IsingFit_{{ version }}.tar.gz
-  sha256: 8741d65b63818c927819155f13a62d21f7d7f4942b9d218e6f93ce12eeff2ddf
+  sha256: 18ab6a8d366fc8d1c4ff8305419b97b28503820ffd84dbc2d3ec1012e550b7df
 
 build:
-  merge_build_host: True  # [win]
-  number: 2
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
 
   rpaths:
@@ -46,11 +46,8 @@ test:
 about:
   home: https://CRAN.R-project.org/package=IsingFit
   license: GPL-2.0-only
-  summary: This network estimation procedure eLasso, which is based on the Ising model, combines
-    l1-regularized logistic regression with model selection based on the Extended Bayesian
-    Information Criterion (EBIC). EBIC is a fit measure that identifies relevant relationships
-    between variables. The resulting network consists of variables as nodes and relevant
-    relationships as edges. Can deal with binary data.
+  summary: This network estimation procedure eLasso, which is based on the Ising model, combines l1-regularized logistic regression with model selection based on the Extended Bayesian Information Criterion (EBIC). EBIC is a fit measure that identifies relevant relationships between variables. The resulting network consists
+    of variables as nodes and relevant relationships as edges. Can deal with binary data.
 
   license_family: GPL2
   license_file:
